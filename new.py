@@ -1,18 +1,18 @@
-""""Addition of Two Number."""
+"""PRIME NUMBER PROGRAM."""
 
 
-def add(num1: int, num2: int) -> int:
-    """Addititon of two number
-
-    Args:
-        num1 (int): num1 is intreger type
-        num2 (int): num2 is intreger type
-      _
+def prime(num: int, count: int = 0) -> bool:
+    """Prime number program.
 
     Returns:
-        int: returns addition for two number.
+        Boolean Value: Returns a Boolean Value True if the number is prime,
+        False otherwise.
     """
-    return num1 + num2
+    for i in range(1, num + 1):
+        if num % i == 0:
+            count += 1
+
+    return count == 2
 
 
-add(10, 20)
+print(prime(10))
